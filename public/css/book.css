@@ -1,0 +1,38 @@
+.list-table{
+    width: 100%;
+    text-align: center;
+}
+.list-table th{
+    color: red;
+    font-size: 16px;
+}
+.list-table input[type=submit]{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #3490dc;
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+.list-table input[type=submit]:hover{
+    text-decoration: underline;
+}
+.add-book{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.edit-table{
+    width: 60%;
+}
+.edit-table td input[type=text]{
+    color: gray;
+}
+.edit-table tr:last-child td{
+    padding-top: 15px;
+}
+.paginate{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
