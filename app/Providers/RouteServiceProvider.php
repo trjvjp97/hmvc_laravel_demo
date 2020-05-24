@@ -18,6 +18,8 @@ class RouteServiceProvider extends ServiceProvider
 
     protected $namespaceBook = 'Core\Modules\Book\Controllers';
 
+    protected $namespaceAuth = 'Core\Modules\Auth\Controllers';
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -42,6 +44,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoutes();
 
         $this->mapBookRoutes();
+
+        $this->mapAuthRoutes();
         //
     }
 
@@ -62,6 +66,11 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapBookRoutes(){
         Route::middleware('web')->namespace($this->namespaceBook)
             ->group(base_path('Core\Modules\Book\routes.php'));
+    }
+
+    protected function mapAuthRoutes(){
+        Route::middleware('web')->namespace($this->namespaceAuth)
+            ->group(base_path('Core\Modules\Auth\routes.php'));
     }
 
     /**
