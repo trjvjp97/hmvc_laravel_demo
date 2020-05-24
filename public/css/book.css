@@ -16,6 +16,7 @@
 }
 .list-table input[type=submit]:hover{
     text-decoration: underline;
+
 }
 .add-book{
     display: flex;
