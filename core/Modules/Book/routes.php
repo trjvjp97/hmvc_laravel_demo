@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
    'prefix' => '/books',
-   'middleware' => ['auth'],
+   'middleware' => ['auth','role:admin'],
 
 ],function(){
 
