@@ -1,0 +1,29 @@
+.otp {
+
+}
+.otp input:first-child{
+    margin-top: 15px;
+}
+.otp input:last-child{
+    margin-bottom: 15px;
+}
+.otp .box-otp{
+    padding: 20px 0px;
+}
+.otp .box-otp .box-input{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #2980b9;
+    border-radius: 15px;
+}
+.otp .box-otp .box-input .input-otp{
+    border: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 20px;
+    height: 25px;
+    text-align: center;
+    outline: none;
+}
+

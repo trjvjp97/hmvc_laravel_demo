@@ -6,6 +6,7 @@ namespace Core\Repositories;
 use App\User;
 use Core\Modules\Auth\Models\OTP;
 use Core\Repositories\Contracts\ResetPasswordRepositoryContract;
+use Illuminate\Support\Facades\Hash;
 
 class ResetPasswordRepository implements ResetPasswordRepositoryContract
 {
@@ -26,6 +27,18 @@ class ResetPasswordRepository implements ResetPasswordRepositoryContract
 
     public function findOtp($email)
     {
-        return $this->otp->where('email',$email)->first();
+        return $this->otp->where('email',$email)->orderBy('created_at','DESC')->first();
+    }
+
+    public function createOtp($data)
+    {
+        return $this->otp->create($data);
+    }
+
+    public function resetPassword($email,$newPass)
+    {
+        $item = $this->findEmail($email);
+        $item->password = Hash::make($newPass);
+        $item->update();
     }
 }

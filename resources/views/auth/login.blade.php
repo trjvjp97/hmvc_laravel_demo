@@ -8,6 +8,11 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                    @if(session('reset'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('reset')}}
+                        </div>
+                    @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -58,7 +63,7 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link" href="{{ route('Auth.auth.reset') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif

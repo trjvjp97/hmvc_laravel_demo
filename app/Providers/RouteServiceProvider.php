@@ -65,12 +65,12 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapBookRoutes(){
         Route::middleware('web')->namespace($this->namespaceBook)
-            ->group(base_path('Core\Modules\Book\routes.php'));
+            ->group(base_path('Core/Modules/Book/routes.php'));
     }
 
     protected function mapAuthRoutes(){
         Route::middleware('web')->namespace($this->namespaceAuth)
-            ->group(base_path('Core\Modules\Auth\routes.php'));
+            ->group(base_path('Core/Modules/Auth/routes.php'));
     }
 
     /**

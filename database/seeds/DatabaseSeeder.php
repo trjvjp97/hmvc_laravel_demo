@@ -28,8 +28,7 @@ class DatabaseSeeder extends Seeder
         }
 
         //3) Create Admin User
-        $user = ['name' => 'Admin User', 'email' => 'adminuser@test.com', 'password' => Hash::make('adminpwd')];
-        $user = User::create($user);
+        $user = User::find(1);
 
         //4) Set User Role
         $user->attachRole($role);
